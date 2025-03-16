@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Oswald:wght@500&family=Roboto:wght@400&display=swap');
+
+body {
+    background: linear-gradient(to bottom, #000000, #1a237e); /* Gradiente de fondo */
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.despedida-container {
+    text-align: center;
+    animation: fadeIn 3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.mensaje-principal {
+    font-family: 'Montserrat', sans-serif; /* Fuente llamativa */
+    font-size: 3.5em; /* Tamaño mayor */
+    margin-bottom: 30px;
+    animation: slideDown 1s ease-out forwards;
+    text-shadow: 2px 2px 5px rgba(0, 150, 255, 0.8); /* Sombra con color */
+    letter-spacing: 3px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Mayúsculas */
+}
+
+.mensaje-secundario {
+    font-family: 'Roboto', sans-serif; /* Fuente legible */
+    font-size: 2em; /* Tamaño mayor */
+    animation: slideUp 1s ease-out 1s forwards;
+    opacity: 0;
+    color: #81d4fa; /* Color azul claro */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes slideDown {
+    0% { transform: translateY(-80px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(80px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.estrellas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    animation: estrellas 10s linear infinite; /* Aumenta la velocidad */
+}
+
+@keyframes estrellas {
+    0% { background-position: 0 0; }
+    100% { background-position: 2000px 2000px; } /* Aumenta el desplazamiento */
+}
+
+.estrellas::before,
+.estrellas::after {
+    content: '';
+    position: absolute;
+    width: 3px; /* Estrellas más grandes */
+    height: 3px; /* Estrellas más grandes */
+    background: #fff;
+    box-shadow: 0 0 8px #fff, 0 0 15px #fff; /* Brillo mayor */
+    animation: estrellas-brillo 1.5s linear infinite; /* Brillo más rápido */
+}
+
+.estrellas::before {
+    top: 15%;
+    left: 5%;
+}
+
+.estrellas::after {
+    top: 80%;
+    right: 10%;
+}
+
+@keyframes estrellas-brillo {
+    0%, 100% { opacity: 1; } /* Brillo más intenso */
+    50% { opacity: 0.4; }
+}

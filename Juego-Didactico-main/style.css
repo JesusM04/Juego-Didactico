@@ -1,0 +1,146 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 90%; /* Aumentado el ancho */
+    max-width: 800px; /* Aumentado el max-width */
+}
+
+.question-container {
+    background-color: #0d4680; /* Color azul oscuro elegante */
+    padding: 30px; /* Aumentado el padding */
+    border-radius: 15px; /* Bordes más redondeados */
+    margin-bottom: 30px; /* Más margen */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para profundidad */
+}
+
+.question {
+    font-size: 1.8em; /* Fuente más grande */
+    margin: 0;
+    color: #ecf0f1; /* Color de texto más claro */
+    font-weight: 600; /* Texto en negrita */
+}
+
+.answers-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Más espacio entre respuestas */
+}
+
+.answer {
+    background-color: #34495e; /* Color gris oscuro elegante */
+    padding: 25px; /* Aumentado el padding */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+    font-size: 1.1em; /* Fuente más grande */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+}
+
+.answer:hover {
+    background-color: #4a6572; /* Color más claro al pasar el ratón */
+    transform: translateY(-3px); /* Ligero efecto de elevación */
+}
+
+.answer.correct {
+    background-color: green;
+}
+
+.answer.incorrect {
+    background-color: red;
+}
+
+#next-round {
+    background-color: #ffc107;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#next-round:hover {
+    background-color: #ffca2c;
+}
+
+/* Nuevos estilos */
+
+.controls-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#help-toggle {
+    background-color: #673ab7; /* Color morado */
+    color: #fff;
+    padding: 12px 25px; /* Botón más grande */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+#help-toggle:hover {
+    background-color: #7e57c2;
+}
+
+.help-groups {
+    display: none;
+    margin-top: 20px; /* Más espacio */
+    text-align: center; /* Centrar los botones */
+}
+
+.help-group-button {
+    background-color: #520096;
+    color: #fff;
+    padding: 10px 20px; /* Botones más grandes */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.help-group-button:hover {
+    background-color: #6826a6;
+}
+
+.help-options {
+    display: none;
+    flex-wrap: wrap;
+    margin-top: 20px; /* Más espacio */
+    text-align: center;
+    color: green;
+}
+
+.help-option {
+    background-color: green;
+    color: #fff;
+    padding: 10px 20px; /* Botones más grandes */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.help-option.used {
+    background-color: red;
+}

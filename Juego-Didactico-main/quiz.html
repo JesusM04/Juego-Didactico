@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quién quiere ser millonario?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="question-container">
+            <p class="question" id="question"></p> <!-- La pregunta se cargará dinámicamente -->
+        </div>
+        <div class="answers-container" id="answers-container">
+            <!-- Las respuestas se cargarán dinámicamente desde JavaScript -->
+        </div>
+        <div class="controls-container">
+            <button id="next-round">Siguiente Ronda</button>
+            <button id="help-toggle">Ayuda</button>
+        </div>
+        <div class="help-groups" id="help-groups">
+            <button class="help-group-button" data-group="1">Grupo 1</button>
+            <button class="help-group-button" data-group="2">Grupo 2</button>
+            <button class="help-group-button" data-group="3">Grupo 3</button>
+            <button class="help-group-button" data-group="4">Grupo 4</button>
+            <button class="help-group-button" data-group="5">Grupo 5</button>
+        </div>
+        <div class="help-options" id="help-options"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

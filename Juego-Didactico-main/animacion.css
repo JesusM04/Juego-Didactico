@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Oswald:wght@500&family=Roboto:wght@400&display=swap');
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Oculta el scroll durante la animación */
+}
+
+.welcome-animation {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.welcome-title {
+    font-family: 'Montserrat', sans-serif; /* Fuente moderna y llamativa */
+    font-size: 3em; /* Tamaño más grande */
+    margin-bottom: 20px;
+    animation: slideDown 1s ease-out forwards;
+    text-shadow: 2px 2px 4px rgba(0, 150, 255, 0.7); /* Sombra con color */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    font-weight: 700; /* Negrita */
+    text-transform: uppercase; /* Mayúsculas */
+}
+
+.subtitle {
+    font-family: 'Roboto', sans-serif; /* Fuente más legible */
+    font-size: 0.6em; /* Tamaño un poco mayor */
+    display: block;
+    margin-top: 10px;
+    opacity: 0.9;
+    color: #81d4fa; /* Color azul claro */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideDown {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.avatars-container {
+    display: flex;
+    justify-content: center;
+    animation: fadeInUp 1s ease-out 1s forwards; /* Retraso de 1 segundo */
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.avatar {
+    margin: 0 20px;
+    text-align: center;
+}
+
+.avatar img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.avatar p {
+    font-family: 'Georgia', serif; /* Fuente elegante */
+    font-size: 1.1em;
+    color: #d1c4e9; /* Color más suave */
+    font-style: italic; /* Texto en cursiva */
+    margin-top: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+}
+
+.presented-by {
+    font-family: 'Oswald', sans-serif; /* Fuente con estilo */
+    font-size: 1.8em; /* Tamaño mayor */
+    font-style: normal; /* Sin cursiva */
+    color: #b3e5fc; /* Color azul más vivo */
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease-out 1s forwards;
+    opacity: 0;
+    text-transform: uppercase; /* Mayúsculas */
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.avatar-name {
+    font-family: 'Georgia', serif;
+    font-size: 2em !important;
+    color: #e0f7fa; /* Color más claro */
+    font-style: italic;
+    margin-top: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-weight: 600; /* Añadido negrita */
+}
